@@ -6,11 +6,11 @@ vim.keymap.set("n", "<leader>og", ":Neotree float git_status<CR>")
 
 vim.keymap.set("n", "<leader>dl", vim.diagnostic.setloclist)
 vim.keymap.set("n", "]d", function()
-  vim.diagnostic.jump({ count = 1 })
+	vim.diagnostic.jump({ count = 1 })
 end, { desc = "Next diagnostic" })
 
 vim.keymap.set("n", "[d", function()
-  vim.diagnostic.jump({ count = -1 })
+	vim.diagnostic.jump({ count = -1 })
 end, { desc = "Prev diagnostic" })
 
 local opts = { noremap = true, silent = true }

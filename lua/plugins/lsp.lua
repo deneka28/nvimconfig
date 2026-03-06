@@ -23,15 +23,13 @@ vim.lsp.config.qmlls = {
 	root_markers = { "qmldir", ".git", "qmldir" },
 	filetypes = { "qml", "qmljs" },
 	settings = {
-    qml = {
-      validate = true,
-      qtInstallation = "/usr/lib/qt6",
-      completion = {
-        enable = true,
-      },
+		qml = {
+			validate = true,
+			qtInstallation = "/usr/lib/qt6",
+			completion = {
+				enable = true,
+			},
 		},
 	},
 }
-vim.lsp.enable({ "qmlls", "lua_ls" })
-
-
+vim.lsp.enable({ "qmlls", "lua_ls", "pyright" })

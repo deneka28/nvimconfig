@@ -1,6 +1,6 @@
 vim.wo.number = true
 vim.wo.relativenumber = true
-
+vim.opt.list = true
 vim.g.formatoptions = "qrn1"
 vim.opt.wrap = false
 vim.opt.shell = "/bin/fish"

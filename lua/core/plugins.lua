@@ -45,6 +45,12 @@ require("lazy").setup({
 		"loctvl842/monokai-pro.nvim",
 	},
 	{ "lunarvim/Onedarker.nvim" },
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	},
 	--END
 	{ "hrsh7th/cmp-nvim-lsp" },
 	{ "hrsh7th/cmp-buffer" },
@@ -151,5 +157,27 @@ require("lazy").setup({
 	},
 	{
 		"rcarriga/nvim-notify",
+	},
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		main = "ibl",
+		---@module "ibl"
+		---@type ibl.config
+		opts = {},
+	},
+	{
+		"folke/which-key.nvim",
+		event = "VeryLazy",
+	},
+	{
+		"RRethy/vim-illuminate",
+	},
+	{
+		"goolord/alpha-nvim",
+		event = "VimEnter",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+	},
+	{
+		"lewis6991/gitsigns.nvim",
 	},
 })

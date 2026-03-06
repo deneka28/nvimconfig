@@ -6,4 +6,8 @@ Rectangle {
     height: 10
     width: 10
     color: "red"
+
+    Rectangle {
+    }
+
 }
