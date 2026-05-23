@@ -21,10 +21,11 @@ vim.diagnostic.config({
 })
 
 require("neo-tree").setup({
+
+	popup_border_style = "rounded",
 	window = {
 		width = 25,
-		-- border = "rounded",
-		popup_border_style = "rounded",
+		position = "float",
 	},
 	filesystem = {
 		filtered_items = {
