@@ -4,7 +4,6 @@ require("core.mappings")
 require("core.colors")
 require("core.configs")
 require("core.diagnostic")
--- require("core.autoformat")
 
 --Plagins
 require("plugins.lsp")

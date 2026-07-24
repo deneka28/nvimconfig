@@ -1,4 +1,10 @@
 require("conform").setup({
+
+    formatters = {
+        qmlformat = {
+            command = "/lib/qt6/bin/qmlformat",
+        },
+    },
     formatters_by_ft = {
         qml = { "qmlformat" },
         lua = { "stylua" },

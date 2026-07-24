@@ -57,17 +57,6 @@ vim.api.nvim_create_autocmd("CursorHold", {
 	end,
 })
 
--- Keymaps для работы с диагностикой
--- local opts = { noremap = true, silent = true }
-
--- Toggle virtual text
--- vim.keymap.set("n", "<leader>dv", function()
--- 	local config = vim.diagnostic.config()
--- 	vim.diagnostic.config({
--- 		virtual_text = not config.virtual_text,
--- 	})
--- end, { desc = "Toggle Diagnostic Virtual Text" })
---
 vim.keymap.set("n", "<leader>dv", function()
 	local config = vim.diagnostic.config()
 	if config.virtual_text then

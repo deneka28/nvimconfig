@@ -1,5 +1,4 @@
 vim.opt.termguicolors = true
-
 -- Функция для установки кастомных highlight групп
 local function set_custom_highlights()
 	-- Убрать фон у некоторых элементов
@@ -41,7 +40,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 
 -- Функция для смены темы
 function SetColor(color)
-	color = color or "tokyonight-moon"
+	color = color or "kanagawa" --"tokyonight-moon"
 	vim.cmd.colorscheme(color)
 
 	-- Применяем кастомные highlight сразу после установки темы

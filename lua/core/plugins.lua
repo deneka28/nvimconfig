@@ -16,7 +16,6 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Setup lazy.nvim
 require("lazy").setup({
-	{ "phaazon/hop.nvim" },
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v3.x",
@@ -41,16 +40,9 @@ require("lazy").setup({
 		},
 	},
 	--Colors
-	{
-		"loctvl842/monokai-pro.nvim",
-	},
-	{ "lunarvim/Onedarker.nvim" },
-	{
-		"folke/tokyonight.nvim",
-		lazy = false,
-		priority = 1000,
-		opts = {},
-	},
+    {
+        "rebelot/kanagawa.nvim",
+    },
 	--END
 	{ "hrsh7th/cmp-nvim-lsp" },
 	{ "hrsh7th/cmp-buffer" },
@@ -98,9 +90,6 @@ require("lazy").setup({
 		"windwp/nvim-autopairs",
 	},
 	{
-		"tanvirtin/monokai.nvim",
-	},
-	{
 		"folke/trouble.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 	},
@@ -122,9 +111,6 @@ require("lazy").setup({
 	},
 	{
 		"norcalli/nvim-colorizer.lua",
-	},
-	{
-		"sainnhe/sonokai",
 	},
 	{
 		"numToStr/Comment.nvim",
@@ -180,4 +166,4 @@ require("lazy").setup({
 	{
 		"lewis6991/gitsigns.nvim",
 	},
-})
+    })
