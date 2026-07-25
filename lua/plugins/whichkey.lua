@@ -48,12 +48,9 @@ wk.add({
 
 	{ "<leader>d", group = "Diagnostics" },
 	{ "<leader>df", vim.diagnostic.open_float, desc = "Show Float" },
-	{ "<leader>dv", "<cmd>lua ...<cr>", desc = "Toggle Virtual Text" },
 	{ "<leader>dl", vim.diagnostic.setloclist, desc = "Location List" },
 	{ "<leader>dq", vim.diagnostic.setqflist, desc = "Quickfix List" },
 
-	{ "]d", vim.diagnostic.goto_next, desc = "Next Diagnostic" },
-	{ "[d", vim.diagnostic.goto_prev, desc = "Previous Diagnostic" },
 	{ "]e", desc = "Next Error" },
 	{ "[e", desc = "Previous Error" },
 

@@ -37,16 +37,13 @@ cmp.setup({
 	}),
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp" },
-		{ name = "vsnip" }, -- For vsnip users.
 		{ name = "luasnip" },
 	}, { { name = "buffer" }, { name = "nvim_lsp_signature_help" } }),
 })
 
 -- Set configuration for specific filetype.
 cmp.setup.filetype("gitcommit", {
-	sources = cmp.config.sources({
-		{ name = "cmp_git" }, -- You can specify the `cmp_git` source if you were installed it.
-	}, { { name = "buffer" } }),
+	sources = cmp.config.sources({}, { { name = "buffer" } }),
 })
 
 -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
@@ -59,11 +56,6 @@ cmp.setup.cmdline({ "/", "?" }, {
 cmp.setup.cmdline(":", {
 	mapping = cmp.mapping.preset.cmdline(),
 	sources = cmp.config.sources({ { name = "path" } }, { { name = "cmdline" } }),
-})
-vim.diagnostic.config({
-	signs = true,
-	underline = true,
-	virtual_text = false,
 })
 -- Set up lspconfig.
 local capabilities = require("cmp_nvim_lsp").default_capabilities()

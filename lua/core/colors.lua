@@ -28,6 +28,34 @@ local function set_custom_highlights()
 	vim.api.nvim_set_hl(0, "DiagnosticInfo", { fg = "#A6E22E" })
 	vim.api.nvim_set_hl(0, "DiagnosticSignInfo", { fg = "#A6E22E" })
 	vim.api.nvim_set_hl(0, "DiagnosticUnderlineInfo", { sp = "#A6E22E", undercurl = true })
+
+	-- Яркая, контрастная подсветка ключевых слов и типов (в т.ч. для QML: import, property,
+	-- signal, function, readonly, required, id и т.д.)
+	vim.api.nvim_set_hl(0, "@keyword", { fg = "#fc1a70" })
+	vim.api.nvim_set_hl(0, "@keyword.function", { fg = "#62d8f1" })
+	vim.api.nvim_set_hl(0, "@keyword.return", { fg = "#fc1a70" })
+	vim.api.nvim_set_hl(0, "@keyword.import", { fg = "#fc1a70" })
+	vim.api.nvim_set_hl(0, "@type", { fg = "#ffffff" })
+	vim.api.nvim_set_hl(0, "@type.builtin", { fg = "#ffffff" })
+	vim.api.nvim_set_hl(0, "@property", { fg = "#ff9700" })
+	vim.api.nvim_set_hl(0, "@function", { fg = "#62d8f1" })
+	vim.api.nvim_set_hl(0, "@string", { fg = "#ffff87" })
+	vim.api.nvim_set_hl(0, "@number", { fg = "#af87ff" })
+	vim.api.nvim_set_hl(0, "@variable", { fg = "#ffffff" })
+	vim.api.nvim_set_hl(0, "@variable.member", { fg = "#ffffff" })
+	vim.api.nvim_set_hl(0, "@variable.parameter", { fg = "#ffffff" })
+	vim.api.nvim_set_hl(0, "@punctuation.bracket", { fg = "#3fa1ff" })
+	vim.api.nvim_set_hl(0, "Operator", { fg = "#62d8f1" })
+	vim.api.nvim_set_hl(0, "Boolean", { fg = "#af87ff" })
+
+	-- LSP semantic tokens (qmlls и другие) могут перекрывать чистый treesitter-@type
+	-- для имён QML-компонентов (Item, Rectangle и т.п.) — дублируем цвет и туда
+	vim.api.nvim_set_hl(0, "@lsp.type.class", { fg = "#a4e400" })
+	vim.api.nvim_set_hl(0, "@lsp.type.type", { fg = "#a4e400" })
+	vim.api.nvim_set_hl(0, "@lsp.type.interface", { fg = "#a4e400" })
+	vim.api.nvim_set_hl(0, "@lsp.type.enum", { fg = "#a4e400" })
+	vim.api.nvim_set_hl(0, "@lsp.type.method", { fg = "#a4e400" })
+	vim.api.nvim_set_hl(0, "@lsp.type.namespace", { fg = "#ffffff" })
 end
 
 -- Создаём autocmd ОДИН РАЗ (вне функции SetColor)
@@ -40,7 +68,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 
 -- Функция для смены темы
 function SetColor(color)
-	color = color or "kanagawa" --"tokyonight-moon"
+	color = color or "monokai-nightasty" --"tokyonight-moon"
 	vim.cmd.colorscheme(color)
 
 	-- Применяем кастомные highlight сразу после установки темы

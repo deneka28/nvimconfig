@@ -40,9 +40,19 @@ require("lazy").setup({
 		},
 	},
 	--Colors
-    {
-        "rebelot/kanagawa.nvim",
-    },
+{
+  "polirritmico/monokai-nightasty.nvim",
+  lazy = false,
+  priority = 1000,
+},
+	{
+		"rebelot/kanagawa.nvim",
+	},
+	{
+		"Mofiqul/dracula.nvim",
+		lazy = false,
+		priority = 1000,
+	},
 	--END
 	{ "hrsh7th/cmp-nvim-lsp" },
 	{ "hrsh7th/cmp-buffer" },
@@ -83,10 +93,6 @@ require("lazy").setup({
 		},
 	},
 	{
-		"windwp/nvim-ts-autotag",
-		dependencies = "nvim-treesitter/nvim-treesitter",
-	},
-	{
 		"windwp/nvim-autopairs",
 	},
 	{
@@ -105,9 +111,6 @@ require("lazy").setup({
 	},
 	{
 		"stevearc/conform.nvim",
-	},
-	{
-		"catppuccin/nvim",
 	},
 	{
 		"norcalli/nvim-colorizer.lua",
@@ -166,4 +169,4 @@ require("lazy").setup({
 	{
 		"lewis6991/gitsigns.nvim",
 	},
-    })
+})
