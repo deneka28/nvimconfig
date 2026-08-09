@@ -59,10 +59,14 @@ vim.lsp.config.lua_ls = {
 
 vim.lsp.config.qmlls = {
 	cmd = { "/lib/qt6/bin/qmlls", "-I", "/usr/lib/qt6/qml" },
-	--cmd = { "qmlls6", "-E" },
-	root_markers = { "qmldir", ".git", "qmldir" },
 	filetypes = { "qml", "qmljs" },
+	root_markers = { "qmldir", ".git" },
 	capabilities = capabilities,
+
+	on_attach = function(client)
+		client.server_capabilities.semanticTokensProvider = nil
+	end,
+
 	settings = {
 		qml = {
 			validate = true,
@@ -73,7 +77,6 @@ vim.lsp.config.qmlls = {
 		},
 	},
 }
-
 vim.lsp.config.pyright = {
 	capabilities = capabilities,
 }

@@ -10,7 +10,7 @@ require("nvim-treesitter").install(parsers)
 
 -- Подсветка через treesitter для всех перечисленных filetype
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "lua", "vim", "vimdoc", "qml", "qmljs", "javascript" },
+	pattern = { "lua", "vim", "vimdoc", "qml", "qmljs", "javascript", "cpp" },
 	callback = function()
 		vim.treesitter.start()
 	end,

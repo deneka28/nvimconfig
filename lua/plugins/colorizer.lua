@@ -1,11 +1,15 @@
-require('colorizer').setup({
-  'css';
-  'scss';
-  'html';
-  'lua'; -- Highlights color codes in your Lua files
-  'javascript';
-  'typescript';
-  'vim';
-  'qml';
-  'qmljs';
+require("colorizer").setup({
+	"css",
+	"scss",
+	"html",
+	"lua", -- Highlights color codes in your Lua files
+	"javascript",
+	"typescript",
+	"vim",
+	"qml",
+	"qmljs",
+	"cpp",
+	"h",
+	"hpp",
+	"py",
 })

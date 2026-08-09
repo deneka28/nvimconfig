@@ -7,6 +7,7 @@ require("core.diagnostic")
 
 --Plagins
 require("plugins.lsp")
+require("plugins.cmp_qml")
 require("plugins.noice")
 require("plugins.whichkey")
 require("plugins.notify")

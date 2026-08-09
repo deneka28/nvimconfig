@@ -40,11 +40,11 @@ require("lazy").setup({
 		},
 	},
 	--Colors
-{
-  "polirritmico/monokai-nightasty.nvim",
-  lazy = false,
-  priority = 1000,
-},
+	{
+		"polirritmico/monokai-nightasty.nvim",
+		lazy = false,
+		priority = 1000,
+	},
 	{
 		"rebelot/kanagawa.nvim",
 	},
@@ -94,6 +94,7 @@ require("lazy").setup({
 	},
 	{
 		"windwp/nvim-autopairs",
+		event = "InsertEnter",
 	},
 	{
 		"folke/trouble.nvim",

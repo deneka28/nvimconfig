@@ -4,10 +4,7 @@ cmp.setup({
 	snippet = {
 		-- REQUIRED - you must specify a snippet engine
 		expand = function(args)
-			vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
 			require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
-			-- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-			-- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
 		end,
 	},
 	window = {
@@ -57,7 +54,15 @@ cmp.setup.cmdline(":", {
 	mapping = cmp.mapping.preset.cmdline(),
 	sources = cmp.config.sources({ { name = "path" } }, { { name = "cmdline" } }),
 })
+cmp.setup.filetype("qml", {
+	sources = cmp.config.sources({
+		{ name = "qml_import" },
+		{ name = "nvim_lsp" },
+		{ name = "path" },
+		{ name = "buffer" },
+	}),
+})
 -- Set up lspconfig.
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
-vim.lsp.config.qmlls.capabilities = capabilities
-vim.lsp.enable("qmlls")
+-- local capabilities = require("cmp_nvim_lsp").default_capabilities()
+-- vim.lsp.config.qmlls.capabilities = capabilities
+-- vim.lsp.enable("qmlls")
