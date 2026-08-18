@@ -3,14 +3,14 @@ require("nvim-treesitter").setup({
 	install_dir = vim.fn.stdpath("data") .. "/site",
 })
 
-local parsers = { "lua", "vim", "vimdoc", "qmljs", "qmldir", "javascript" }
+local parsers = { "lua", "vim", "vimdoc", "qmljs", "qmldir", "javascript", "cpp", "c", "h", "hpp" }
 
 -- Явная установка парсеров (проверяет, что уже стоит, лишний раз не переустанавливает)
 require("nvim-treesitter").install(parsers)
 
 -- Подсветка через treesitter для всех перечисленных filetype
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "lua", "vim", "vimdoc", "qml", "qmljs", "javascript", "cpp" },
+	pattern = { "lua", "vim", "vimdoc", "qml", "qmljs", "javascript", "cpp", "c", "h", "hpp" },
 	callback = function()
 		vim.treesitter.start()
 	end,

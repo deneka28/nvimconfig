@@ -36,7 +36,32 @@
 --
 -- Единые capabilities для всех LSP-серверов (расширенное автодополнение от nvim-cmp)
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
+vim.lsp.config.clangd = {
+	cmd = {
+		"clangd",
+		"--background-index",
+		"--clang-tidy",
+		"--completion-style=detailed",
+		"--header-insertion=iwyu",
+		"--fallback-style=LLVM",
+	},
 
+	filetypes = {
+		"c",
+		"cpp",
+		"objc",
+		"objcpp",
+		"cuda",
+	},
+
+	root_markers = {
+		"compile_commands.json",
+		"compile_flags.txt",
+		".git",
+	},
+
+	capabilities = capabilities,
+}
 -- Lua (Neovim)
 vim.lsp.config.lua_ls = {
 	capabilities = capabilities,
@@ -81,4 +106,4 @@ vim.lsp.config.pyright = {
 	capabilities = capabilities,
 }
 
-vim.lsp.enable({ "qmlls", "lua_ls", "pyright" })
+vim.lsp.enable({ "qmlls", "lua_ls", "pyright", "clangd" })

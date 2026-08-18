@@ -13,6 +13,8 @@ require("conform").setup({
 		qml = { "qmlformat" },
 		lua = { "stylua" },
 		javascript = { "prettierd", "prettier", stop_after_first = true },
+		c = { "clang_format" },
+		cpp = { "clang_format" },
 	},
 	format_on_save = {
 		timeout_ms = 500,
