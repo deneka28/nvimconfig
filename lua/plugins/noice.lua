@@ -51,26 +51,3 @@ require("noice").setup({
 		},
 	},
 })
-keys = {
-	{
-		"<leader>sn",
-		function()
-			require("noice").cmd("history")
-		end,
-		desc = "Noice History",
-	},
-	{
-		"<leader>sl",
-		function()
-			require("noice").cmd("last")
-		end,
-		desc = "Noice Last Message",
-	},
-	{
-		"<leader>sd",
-		function()
-			require("noice").cmd("dismiss")
-		end,
-		desc = "Dismiss All",
-	},
-}

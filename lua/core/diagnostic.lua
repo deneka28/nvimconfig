@@ -77,25 +77,3 @@ vim.keymap.set("n", "<leader>dv", function()
 		})
 	end
 end, { desc = "Toggle Diagnostic Virtual Text" })
-
--- Показать диагностику в floating окне
-vim.keymap.set("n", "<leader>df", vim.diagnostic.open_float, { desc = "Show Diagnostics" })
-
--- Перейти к следующей/предыдущей диагностике
-vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next Diagnostic" })
-vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous Diagnostic" })
-
--- Перейти к следующей/предыдущей ошибке (только ERROR)
-vim.keymap.set("n", "]e", function()
-	vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.ERROR })
-end, { desc = "Next Error" })
-
-vim.keymap.set("n", "[e", function()
-	vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR })
-end, { desc = "Previous Error" })
-
--- Показать список всех диагностик в loclist
-vim.keymap.set("n", "<leader>dl", vim.diagnostic.setloclist, { desc = "Diagnostics to Loclist" })
-
--- Показать список всех диагностик в quickfix
-vim.keymap.set("n", "<leader>dq", vim.diagnostic.setqflist, { desc = "Diagnostics to Quickfix" })

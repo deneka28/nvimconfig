@@ -21,6 +21,12 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.clipboard = "unnamedplus"
 
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldenable = true
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 99
+
 local group = vim.api.nvim_create_augroup("LspDocumentHighlight", { clear = true })
 
 vim.api.nvim_create_autocmd("LspAttach", {

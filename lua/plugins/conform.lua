@@ -6,7 +6,7 @@ require("conform").setup({
 			-- -f/--force: не отказываться молча, если qmlformat не может
 			-- гарантировать, что переформатированный файл семантически
 			-- идентичен исходному (см. https://doc.qt.io/qt-6/qtqml-tooling-qmlformat.html)
-			args = { "-i", "-f", "$FILENAME" },
+			args = { "-i", "$FILENAME" },
 		},
 	},
 	formatters_by_ft = {
