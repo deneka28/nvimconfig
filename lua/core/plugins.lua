@@ -81,11 +81,6 @@ require("lazy").setup({
 	},
 
 	{
-		"nvimtools/none-ls.nvim",
-		dependencies = { "nvim-lua/plenary.nvim", "williamboman/mason.nvim" },
-	},
-
-	{
 		"nvim-lualine/lualine.nvim",
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",

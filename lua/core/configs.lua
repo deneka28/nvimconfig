@@ -1,5 +1,5 @@
-vim.wo.number = true
-vim.wo.relativenumber = true
+-- vim.wo.number = true
+-- vim.wo.relativenumber = true
 vim.opt.list = true
 vim.g.formatoptions = "qrn1"
 vim.opt.wrap = false
